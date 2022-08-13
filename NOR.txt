@@ -1,0 +1,5 @@
+vdd vdd 0 dc 1.8
+va A 0 pulse (0 1.8 0 1n 1n 10n 20n)
+vb B 0 pulse (0 1.8 0 1n 1n 20n 40n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt

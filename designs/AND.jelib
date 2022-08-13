@@ -1,0 +1,96 @@
+# header information:
+HAND|9.07
+
+# Views:
+Vicon|ic
+Vlayout|lay
+Vschematic|sch
+
+# External Libraries:
+
+Linverter_tutorial|inverter_tutorial
+
+Lnand_tutorial|nand_tutorial
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell AND;1{ic}
+CAND;1{ic}||artwork|1659559159640|1659559659831|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NCircle|art@2||8|-1|6|6|RRR||ART_degrees()F[0.0,3.1415927]
+NOpened-Polygon|art@6||6|-1|4|6|||trace()V[2/-3,-2/-3,-2/3,2/3]
+Nschematic:Bus_Pin|pin@0||2|-3||||
+Nschematic:Wire_Pin|pin@1||4|-3||||
+Nschematic:Bus_Pin|pin@2||2|1||||
+Nschematic:Wire_Pin|pin@3||4|1||||
+Nschematic:Bus_Pin|pin@4||11|-1||||
+Nschematic:Wire_Pin|pin@5||14|-1||||
+Aschematic:wire|net@0|||0|pin@1||4|-3|pin@0||2|-3
+Aschematic:wire|net@1|||0|pin@3||4|1|pin@2||2|1
+Aschematic:wire|net@2|||0|pin@5||14|-1|pin@4||11|-1
+EA||D5G2;X-1;|pin@2||U
+EB||D5G2;X-1;|pin@0||U
+Eout||D5G2;X5;|pin@4||U
+X
+
+# Cell AND;1{lay}
+CAND;1{lay}||mocmos|1659477799550|1659560106022||DRC_last_good_drc_area_date()G1659560041734|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1659560041734
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Metal-2-Con|contact@0||36|-3||||
+Iinverter_tutorial:inverter_sch;1{lay}|inverter@0||55|-3|||D5G4;
+Inand_tutorial:nand_sch;1{lay}|nand_sch@0||-10|-2|||D5G4;
+NMetal-1-Pin|pin@0||-21|43||||
+NMetal-1-Pin|pin@1||45|43||||
+NMetal-1-Pin|pin@2||-21|-43||||
+NMetal-1-Pin|pin@3||47|-43||||
+NMetal-1-Pin|pin@5||70|-3||||
+NMetal-2-Pin|pin@8||-68|-1||||
+NMetal-1-Pin|pin@9||9|43||||
+NMetal-1-Pin|pin@10||9|54||||
+NMetal-1-Pin|pin@11||11|-43||||
+NMetal-1-Pin|pin@12||11|-57||||
+NMetal-2-Pin|pin@13||-21|-51||||
+NMetal-2-Pin|pin@15||36|-51||||
+NMetal-2-Pin|pin@16||24|-1||||
+Ngeneric:Invisible-Pin|pin@17||-79|-51|||||SIM_spice_card(D5G3;)S[vdd vdd 0 dc 1.8,va A 0 pulse (0 1.8 0 0.1n 0.1n 10n 20n),vb B 0 pulse (0 1.8 0 0.1n 0.1n 20n 40n),.tran 1n 100n,".include C:\\Users\\Mahmud Suhaimi\\Desktop\\EDA-Tool-1\\tsmc_018um_model.txt"]
+AMetal-1|net@0||1|S2700|nand_sch@0|vdd|-21|28|pin@0||-21|43
+AMetal-1|net@2||1|S900|pin@1||45|43|inverter@0|Vdd|45|34
+AMetal-1|net@3||1|S900|nand_sch@0|gnd|-21|-25|pin@2||-21|-43
+AMetal-1|net@5||1|S2700|pin@3||47|-43|inverter@0|gnd|47|-28
+AMetal-1|net@8||1|S0|inverter@0|in|36|-3|contact@0||36|-3
+AMetal-1|net@9||1|S1800|inverter@0|out|58|-3|pin@5||70|-3
+AMetal-2|net@12||1|S0|nand_sch@0|A|-61|-1|pin@8||-68|-1
+AMetal-1|net@13||1|S1800|pin@0||-21|43|pin@9||9|43
+AMetal-1|net@14||1|S1800|pin@9||9|43|pin@1||45|43
+AMetal-1|net@15||1|S2700|pin@9||9|43|pin@10||9|54
+AMetal-1|net@16||1|S1800|pin@2||-21|-43|pin@11||11|-43
+AMetal-1|net@17||1|S1800|pin@11||11|-43|pin@3||47|-43
+AMetal-1|net@18||1|S900|pin@11||11|-43|pin@12||11|-57
+AMetal-2|net@19||1|S900|nand_sch@0|out|-21|1|pin@13||-21|-51
+AMetal-2|net@22||1|S900|contact@0||36|-3|pin@15||36|-51
+AMetal-2|net@23||1|S1800|pin@13||-21|-51|pin@15||36|-51
+AMetal-2|net@24||1|S1800|nand_sch@0|B|17|-1|pin@16||24|-1
+EA||D5G2;|pin@8||U
+EB||D5G2;|pin@16||U
+Egnd||D5G2;|pin@12||U
+Eout||D5G2;|pin@5||U
+Evdd||D5G2;|pin@10||U
+X
+
+# Cell AND;1{sch}
+CAND;1{sch}||schematic|1659477592747|1659560098325|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Iinverter_tutorial:inverter_sch;1{sch}|inverter@2||68|2|||D5G4;
+Inand_tutorial:nand_sch;1{sch}|nand_sch@0||-2|-8|||D5G4;
+NWire_Pin|pin@1||-74|13||||
+NWire_Pin|pin@2||-74|6||||
+NWire_Pin|pin@3||97|7||||
+Awire|net@2|||0|nand_sch@0|B|-55|13|pin@1||-74|13
+Awire|net@3|||0|nand_sch@0|A|-36|6|pin@2||-74|6
+Awire|net@4|||1800|inverter@2|out|61|7|pin@3||97|7
+Awire|net@5|||1800|nand_sch@0|out|20|7|inverter@2|in|42|7
+EA||D5G2;|pin@2||U
+EB||D5G2;|pin@1||U
+Eout||D5G2;|pin@3||U
+X

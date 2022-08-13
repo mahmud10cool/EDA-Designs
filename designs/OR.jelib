@@ -1,0 +1,92 @@
+# header information:
+HOR|9.07
+
+# Views:
+Vicon|ic
+Vlayout|lay
+Vschematic|sch
+
+# External Libraries:
+
+Linverter_tutorial|inverter_tutorial
+
+Lnor_tutorial|nor_tutorial
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell OR;1{ic}
+COR;1{ic}||artwork|1659560811045|1659561294637|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NSpline|art@1||2|0|6|6|||trace()V[-3/3,3/2,3/-2,-3/-3]
+NSpline|art@2||0|0|2|6|||trace()V[-1/3,1/2,1/-2,-1/-3]
+Nschematic:Bus_Pin|pin@0||5|0||||
+Nschematic:Wire_Pin|pin@1||7|0||||
+Nschematic:Bus_Pin|pin@2||-2|-2||||
+Nschematic:Wire_Pin|pin@3||0|-2||||
+Nschematic:Bus_Pin|pin@4||-2|2||||
+Nschematic:Wire_Pin|pin@5||0|2||||
+Aschematic:wire|net@0|||0|pin@1||7|0|pin@0||5|0
+Aschematic:wire|net@1|||0|pin@3||0|-2|pin@2||-2|-2
+Aschematic:wire|net@2|||0|pin@5||0|2|pin@4||-2|2
+EA||D5G2;X-1;|pin@4||U
+EB||D5G2;X-1;|pin@2||U
+Eout||D5G2;X4;|pin@0||U
+X
+
+# Cell OR;1{lay}
+COR;1{lay}||mocmos|1659560819717|1659561738031||DRC_last_good_drc_area_date()G1659561574353|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1659561574353
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Metal-2-Con|contact@0||38|-5||||
+Iinverter_tutorial:inverter_sch;1{lay}|inverter@1||57|-5|||D5G4;
+Inor_tutorial:nor_sch;1{lay}|nor_sch@0||3|-11|||D5G4;
+NMetal-1-Pin|pin@0||-58|41||||
+NMetal-1-Pin|pin@1||47|41||||
+NMetal-1-Pin|pin@2||-27|-46||||
+NMetal-1-Pin|pin@3||49|-46||||
+NMetal-2-Pin|pin@6||11|11||||
+NMetal-2-Pin|pin@7||-98|0||||
+NMetal-1-Pin|pin@8||74|-5||||
+NMetal-1-Pin|pin@9||-8|41||||
+NMetal-1-Pin|pin@10||-8|50||||
+NMetal-1-Pin|pin@11||12|-46||||
+NMetal-1-Pin|pin@12||12|-53||||
+AMetal-1|net@0||1|S2700|nor_sch@0|vdd|-58|21|pin@0||-58|41
+AMetal-1|net@2||1|S900|pin@1||47|41|inverter@1|Vdd|47|32
+AMetal-1|net@3||1|S900|nor_sch@0|gnd|-27|-32|pin@2||-27|-46
+AMetal-1|net@5||1|S2700|pin@3||49|-46|inverter@1|gnd|49|-30
+AMetal-1|net@9||1|S2700|inverter@1|in|38|-5|contact@0||38|-5
+AMetal-2|net@10||1|S1800|nor_sch@0|out|-46|-5|contact@0||38|-5
+AMetal-2|net@11||1|S1800|nor_sch@0|B|-4|11|pin@6||11|11
+AMetal-2|net@12||1|S0|nor_sch@0|A|-85|0|pin@7||-98|0
+AMetal-1|net@13||1|S1800|inverter@1|out|60|-5|pin@8||74|-5
+AMetal-1|net@14||1|S1800|pin@0||-58|41|pin@9||-8|41
+AMetal-1|net@15||1|S1800|pin@9||-8|41|pin@1||47|41
+AMetal-1|net@16||1|S2700|pin@9||-8|41|pin@10||-8|50
+AMetal-1|net@17||1|S1800|pin@2||-27|-46|pin@11||12|-46
+AMetal-1|net@18||1|S1800|pin@11||12|-46|pin@3||49|-46
+AMetal-1|net@19||1|S900|pin@11||12|-46|pin@12||12|-53
+EA||D5G2;|pin@7||U
+EB||D5G2;|pin@6||U
+Egnd||D5G2;|pin@12||U
+Eout||D5G2;|pin@8||U
+Evdd||D5G2;|pin@10||U
+X
+
+# Cell OR;1{sch}
+COR;1{sch}||schematic|1659560802340|1659561742821|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Iinverter_tutorial:inverter_sch;1{sch}|inverter@0||50|-5|||D5G4;
+Inor_tutorial:nor_sch;1{sch}|nor_sch@0||-22|2|||D5G4;
+NWire_Pin|pin@0||72|0||||
+NWire_Pin|pin@1||-59|16||||
+NWire_Pin|pin@2||-59|6||||
+Ngeneric:Invisible-Pin|pin@3||38|-38|||||SIM_spice_card(D5G3;)S[vdd vdd 0 dc 1.8,va A 0 pulse (0 1.8 0 0.1n 0.1n 10n 20n),vb B 0 pulse (0 1.8 0 0.1n 0.1n 20n 40n),.tran 1n 100n,".include C:\\Users\\Mahmud Suhaimi\\Desktop\\EDA-Tool-1\\tsmc_018um_model.txt"]
+Awire|net@0|||1800|nor_sch@0|out|-4|0|inverter@0|in|24|0
+Awire|net@1|||1800|inverter@0|out|43|0|pin@0||72|0
+Awire|net@2|||0|nor_sch@0|A|-50|16|pin@1||-59|16
+Awire|net@3|||0|nor_sch@0|B|-36|6|pin@2||-59|6
+EA||D5G2;|pin@1||U
+EB||D5G2;|pin@2||U
+Eout||D5G2;|pin@0||U
+X

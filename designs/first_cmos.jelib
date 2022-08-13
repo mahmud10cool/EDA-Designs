@@ -1,0 +1,24 @@
+# header information:
+Hfirst_cmos|9.07
+
+# Views:
+Vlayout|lay
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell tnp;1{lay}
+Ctnp;1{lay}||mocmos|1659212509100|1659214306057|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-N-Active-Con|contact@28||7|-56||||
+NMetal-1-N-Active-Con|contact@29||-2|-56||||
+NMetal-1-P-Active-Con|contact@36||7|-37||||
+NMetal-1-P-Active-Con|contact@37||-2|-37||||
+NN-Transistor|nmos@4||2.5|-56|||R|
+NP-Transistor|pmos@2||2.5|-37|||R|
+AN-Active|net@99|||S0|nmos@4|diff-top|-1.25|-56|contact@29||-2|-56
+AN-Active|net@100|||S1800|nmos@4|diff-bottom|6.25|-56|contact@28||7|-56
+AP-Active|net@101|||S0|pmos@2|diff-top|-1.25|-37|contact@37||-2|-37
+AP-Active|net@102|||S1800|pmos@2|diff-bottom|6.25|-37|contact@36||7|-37
+APolysilicon-1|net@103|||S2700|nmos@4|poly-right|2.5|-52.5|pmos@2|poly-left|2.5|-40.5
+X

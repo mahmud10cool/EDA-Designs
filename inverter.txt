@@ -1,0 +1,11 @@
+vg g 0 dc 0
+vs s 0 dc 0
+vd d 0 dc 0
+.dc vd 0 1.8 0.1m vg 0 1.8 0.3
+
+.dc vin 0 1.8 0.1m
+
+vdd vdd 0 dc 1.8
+vin in 0 pulse (0 1.8 0 1n 1n 10n 20n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt

@@ -1,0 +1,38 @@
+*** SPICE deck for cell OR{sch} from library OR
+*** Created on Thu Aug 04, 2022 03:06:42
+*** Last revised on Thu Aug 04, 2022 03:22:22
+*** Written on Thu Aug 04, 2022 03:22:27 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter_tutorial__inverter_sch FROM CELL inverter_tutorial:inverter_sch{sch}
+.SUBCKT inverter_tutorial__inverter_sch in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 out in gnd gnd CMOSN L=0.36U W=1.8U
+Mpmos-4@0 out in vdd vdd CMOSP L=0.36U W=3.6U
+.ENDS inverter_tutorial__inverter_sch
+
+*** SUBCIRCUIT nor_tutorial__nor_sch FROM CELL nor_sch{sch}
+.SUBCKT nor_tutorial__nor_sch A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@1 gnd A out gnd CMOSN L=0.36U W=1.8U
+Mnmos@2 out B gnd gnd CMOSN L=0.36U W=1.8U
+Mpmos@1 vdd A net@40 vdd CMOSP L=0.36U W=1.8U
+Mpmos@2 net@40 B out vdd CMOSP L=0.36U W=1.8U
+.ENDS nor_tutorial__nor_sch
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: OR:OR{sch}
+Xinverter@0 net@0 out inverter_tutorial__inverter_sch
+Xnor_sch@0 A B net@0 nor_tutorial__nor_sch
+
+* Spice Code nodes in cell cell 'OR:OR{sch}'
+vdd vdd 0 dc 1.8
+va A 0 pulse (0 1.8 0 0.1n 0.1n 10n 20n)
+vb B 0 pulse (0 1.8 0 0.1n 0.1n 20n 40n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt
+.END

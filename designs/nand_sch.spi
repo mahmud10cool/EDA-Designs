@@ -1,0 +1,22 @@
+*** SPICE deck for cell nand_sch{sch} from library nand_tutorial
+*** Created on Wed Aug 03, 2022 02:18:13
+*** Last revised on Wed Aug 03, 2022 03:16:02
+*** Written on Wed Aug 03, 2022 03:16:27 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: nand_sch{sch}
+Mnmos@0 net@0 A gnd gnd CMOSN L=0.36U W=1.8U
+Mnmos@1 out B net@0 gnd CMOSN L=0.36U W=1.8U
+Mpmos@0 vdd B out vdd CMOSP L=0.36U W=1.8U
+Mpmos@1 out A vdd vdd CMOSP L=0.36U W=1.8U
+
+* Spice Code nodes in cell cell 'nand_sch{sch}'
+vdd vdd 0 dc 1.8
+va A 0 pulse (0 1.8 0 0.1n 0.1n 10n 20n)
+vb B 0 pulse (0 1.8 0 0.1n 0.1n 20n 40n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt
+.END

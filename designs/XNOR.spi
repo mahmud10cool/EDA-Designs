@@ -1,0 +1,108 @@
+*** SPICE deck for cell XNOR{lay} from library XNOR
+*** Created on Thu Aug 04, 2022 03:36:09
+*** Last revised on Thu Aug 04, 2022 06:03:23
+*** Written on Thu Aug 04, 2022 06:03:35 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: XNOR{lay}
+Mnmos@1 net@0 net@47#10nmos@1_poly-right gnd gnd CMOSN L=0.36U W=1.8U AS=6.156P AD=1.555P PS=19.35U PD=6.3U
+Mnmos@2 out A#8nmos@2_poly-right net@0 gnd CMOSN L=0.36U W=1.8U AS=1.555P AD=3.418P PS=6.3U PD=12.06U
+Mnmos@3 net@1 B#7nmos@3_poly-left gnd gnd CMOSN L=0.36U W=1.8U AS=6.156P AD=1.555P PS=19.35U PD=6.3U
+Mnmos@4 out net@33#10nmos@4_poly-left net@1 gnd CMOSN L=0.36U W=1.8U AS=1.555P AD=3.418P PS=6.3U PD=12.06U
+Mnmos@5 gnd A#2nmos@5_poly-right net@33 gnd CMOSN L=0.36U W=1.8U AS=4.568P AD=6.156P PS=15.12U PD=19.35U
+Mnmos@6 gnd B#5nmos@6_poly-right net@47 gnd CMOSN L=0.36U W=1.8U AS=4.568P AD=6.156P PS=15.12U PD=19.35U
+Mpmos@0 net@12 A#5pmos@0_poly-right out vdd CMOSP L=0.36U W=1.8U AS=3.418P AD=1.555P PS=12.06U PD=6.3U
+Mpmos@1 vdd B#0pmos@1_poly-right net@12 vdd CMOSP L=0.36U W=1.8U AS=1.555P AD=7.501P PS=6.3U PD=23.13U
+Mpmos@2 net@15 net@47#7pmos@2_poly-left out vdd CMOSP L=0.36U W=1.8U AS=3.418P AD=1.555P PS=12.06U PD=6.3U
+Mpmos@3 vdd net@33#7pmos@3_poly-left net@15 vdd CMOSP L=0.36U W=1.8U AS=1.555P AD=7.501P PS=6.3U PD=23.13U
+Mpmos@4 net@33 A#0pmos@4_poly-left vdd vdd CMOSP L=0.36U W=3.6U AS=7.501P AD=4.568P PS=23.13U PD=15.12U
+Mpmos@5 net@47 B#3pmos@5_poly-left vdd vdd CMOSP L=0.36U W=3.6U AS=7.501P AD=4.568P PS=23.13U PD=15.12U
+** Extracted Parasitic Capacitors ***
+C0 out 0 7.425fF
+C1 net@33 0 10.821fF
+C2 net@47 0 15.411fF
+C3 B 0 17.629fF
+C4 A 0 8.06fF
+C5 A#1pin@15_polysilicon-1 0 0.186fF
+C6 B#3pmos@5_poly-left 0 0.175fF
+** Extracted Parasitic Resistors ***
+R0 B#0pmos@1_poly-right B#0pmos@1_poly-right##0 7.233
+R1 B#0pmos@1_poly-right##0 B#0pmos@1_poly-right##1 7.233
+R2 B#0pmos@1_poly-right##1 B 7.233
+R3 A#0pmos@4_poly-left A#1pin@15_polysilicon-1 9.3
+R4 A#1pin@15_polysilicon-1 A#1pin@15_polysilicon-1##0 7.75
+R5 A#1pin@15_polysilicon-1##0 A#2nmos@5_poly-right 7.75
+R6 A#1pin@15_polysilicon-1 A#1pin@15_polysilicon-1##0 9.3
+R7 A#1pin@15_polysilicon-1##0 A#1pin@15_polysilicon-1##1 9.3
+R8 A#1pin@15_polysilicon-1##1 A#1pin@15_polysilicon-1##2 9.3
+R9 A#1pin@15_polysilicon-1##2 A#1pin@15_polysilicon-1##3 9.3
+R10 A#1pin@15_polysilicon-1##3 A#1pin@15_polysilicon-1##4 9.3
+R11 A#1pin@15_polysilicon-1##4 A#1pin@15_polysilicon-1##5 9.3
+R12 A#1pin@15_polysilicon-1##5 A#1pin@15_polysilicon-1##6 9.3
+R13 A#1pin@15_polysilicon-1##6 A#1pin@15_polysilicon-1##7 9.3
+R14 A#1pin@15_polysilicon-1##7 A#1pin@15_polysilicon-1##8 9.3
+R15 A#1pin@15_polysilicon-1##8 A#1pin@15_polysilicon-1##9 9.3
+R16 A#1pin@15_polysilicon-1##9 A 9.3
+R17 B#3pmos@5_poly-left B#3pmos@5_poly-left##0 7.233
+R18 B#3pmos@5_poly-left##0 B#3pmos@5_poly-left##1 7.233
+R19 B#3pmos@5_poly-left##1 B#5nmos@6_poly-right 7.233
+R20 B#3pmos@5_poly-left B#3pmos@5_poly-left##0 9.582
+R21 B#3pmos@5_poly-left##0 B#3pmos@5_poly-left##1 9.582
+R22 B#3pmos@5_poly-left##1 B#3pmos@5_poly-left##2 9.582
+R23 B#3pmos@5_poly-left##2 B#3pmos@5_poly-left##3 9.582
+R24 B#3pmos@5_poly-left##3 B#3pmos@5_poly-left##4 9.582
+R25 B#3pmos@5_poly-left##4 B#3pmos@5_poly-left##5 9.582
+R26 B#3pmos@5_poly-left##5 B#3pmos@5_poly-left##6 9.582
+R27 B#3pmos@5_poly-left##6 B#3pmos@5_poly-left##7 9.582
+R28 B#3pmos@5_poly-left##7 B#3pmos@5_poly-left##8 9.582
+R29 B#3pmos@5_poly-left##8 B#3pmos@5_poly-left##9 9.582
+R30 B#3pmos@5_poly-left##9 B 9.582
+R31 A#5pmos@0_poly-right A#5pmos@0_poly-right##0 7.233
+R32 A#5pmos@0_poly-right##0 A#5pmos@0_poly-right##1 7.233
+R33 A#5pmos@0_poly-right##1 A 7.233
+R34 net@33#7pmos@3_poly-left net@33#7pmos@3_poly-left##0 7.233
+R35 net@33#7pmos@3_poly-left##0 net@33#7pmos@3_poly-left##1 7.233
+R36 net@33#7pmos@3_poly-left##1 net@33 7.233
+R37 net@47#7pmos@2_poly-left net@47#7pmos@2_poly-left##0 7.233
+R38 net@47#7pmos@2_poly-left##0 net@47#7pmos@2_poly-left##1 7.233
+R39 net@47#7pmos@2_poly-left##1 net@47 7.233
+R40 A#8nmos@2_poly-right A#8nmos@2_poly-right##0 7.233
+R41 A#8nmos@2_poly-right##0 A#8nmos@2_poly-right##1 7.233
+R42 A#8nmos@2_poly-right##1 A 7.233
+R43 net@47#10nmos@1_poly-right net@47#10nmos@1_poly-right##0 7.233
+R44 net@47#10nmos@1_poly-right##0 net@47#10nmos@1_poly-right##1 7.233
+R45 net@47#10nmos@1_poly-right##1 net@47 7.233
+R46 net@33#10nmos@4_poly-left net@33#10nmos@4_poly-left##0 7.233
+R47 net@33#10nmos@4_poly-left##0 net@33#10nmos@4_poly-left##1 7.233
+R48 net@33#10nmos@4_poly-left##1 net@33 7.233
+R49 B#7nmos@3_poly-left B#7nmos@3_poly-left##0 7.233
+R50 B#7nmos@3_poly-left##0 B#7nmos@3_poly-left##1 7.233
+R51 B#7nmos@3_poly-left##1 B 7.233
+
+* Spice Code nodes in cell cell 'XNOR{lay}'
+vdd vdd 0 dc 1.8
+va A 0 pulse (0 1.8 0 1n 1n 10n 20n)
+vb B 0 pulse (0 1.8 0 1n 1n 20n 40n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt
+.END

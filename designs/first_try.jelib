@@ -1,0 +1,14 @@
+# header information:
+Hfirst_try|9.07
+
+# Views:
+Vlayout|lay
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell one_first;1{lay}
+Cone_first;1{lay}||mocmos|1659210333478|1659210357546|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NN-Transistor|nmos@0||-2|8||||
+X

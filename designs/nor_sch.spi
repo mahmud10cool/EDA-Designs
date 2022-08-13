@@ -1,0 +1,22 @@
+*** SPICE deck for cell nor_sch{sch} from library nor_tutorial
+*** Created on Mon Aug 01, 2022 20:26:34
+*** Last revised on Tue Aug 02, 2022 04:45:49
+*** Written on Tue Aug 02, 2022 04:46:07 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: nor_sch{sch}
+Mnmos@1 gnd A out gnd CMOSN L=0.36U W=1.8U
+Mnmos@2 out B gnd gnd CMOSN L=0.36U W=1.8U
+Mpmos@1 vdd A net@40 vdd CMOSP L=0.36U W=1.8U
+Mpmos@2 net@40 B out vdd CMOSP L=0.36U W=1.8U
+
+* Spice Code nodes in cell cell 'nor_sch{sch}'
+vdd vdd 0 dc 1.8
+va A 0 pulse (0 1.8 0 1n 1n 10n 20n)
+vb B 0 pulse (0 1.8 0 1n 1n 20n 40n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt
+.END

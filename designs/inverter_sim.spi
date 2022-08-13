@@ -1,0 +1,22 @@
+*** SPICE deck for cell inverter_sim{lay} from library inverter_tutorial
+*** Created on Tue Aug 02, 2022 03:15:33
+*** Last revised on Tue Aug 02, 2022 03:18:58
+*** Written on Tue Aug 02, 2022 03:19:13 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter_tutorial__inverter_sch FROM CELL inverter_sch{lay}
+.SUBCKT inverter_tutorial__inverter_sch gnd in out vdd
+Mnmos@0 out in gnd gnd CMOSN L=0.36U W=1.8U AS=5.832P AD=3.888P PS=15.48U PD=8.28U
+Mpmos@0 out in vdd vdd CMOSP L=0.36U W=3.6U AS=8.424P AD=3.888P PS=19.08U PD=8.28U
+.ENDS inverter_tutorial__inverter_sch
+
+*** TOP LEVEL CELL: inverter_sim{lay}
+Xinverter@0 gnd in out vdd inverter_tutorial__inverter_sch
+
+* Spice Code nodes in cell cell 'inverter_sim{lay}'
+vdd vdd 0 dc 1.8
+vin in 0 pulse (0 1.8 0 1n 1n 10n 20n)
+.tran 1n 100n
+.include C:\Users\Mahmud Suhaimi\Desktop\EDA-Tool-1\tsmc_018um_model.txt
+.END
