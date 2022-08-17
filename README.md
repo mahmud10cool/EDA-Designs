@@ -2,8 +2,7 @@
 Learning CMOS VLSI
 
 ## Download Java
-Go on your web browser
-Make sure you have java downloaded
+Go on your web browser and make sure you have java downloaded
 
 ## Download Java 3D
 Setup is proivded in the branch
